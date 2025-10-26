@@ -28,5 +28,5 @@ O site foi projetado com media queries e layout flexível para funcionar bem em 
 
 As imagens foram convertidas para formatos modernos como **WebP** usando [Squoosh](https://squoosh.app), garantindo carregamento rápido e compatibilidade.
 
-## 🛠️ Como rodar localmente
+
 
