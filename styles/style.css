@@ -10,7 +10,7 @@ body {
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
-  padding: 20px;
+  padding: 2%;
 }
 
 /* Cabeçalho */
@@ -24,19 +24,23 @@ header {
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   margin-top: 10px;
+  padding: 0;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: #004d66;
 }
 
 /* Seções principais */
@@ -56,6 +60,7 @@ section {
 h1, h2 {
   color: #006699;
   margin-bottom: 10px;
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 /* Imagens */
@@ -64,6 +69,7 @@ img {
   height: auto;
   border-radius: 6px;
   margin-top: 10px;
+  display: block;
 }
 
 /* Formulário */
@@ -95,10 +101,10 @@ input {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 1rem;
 }
 
 button {
-  padding: 10px;
   background-color: #006699;
   color: white;
   padding: 10px 20px;
@@ -107,7 +113,14 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 1rem;
 }
+
+button:hover {
+  background-color: #004d66;
+}
+
+/* Cards */
 .card {
   background-color: white;
   border: 1px solid #ddd;
@@ -115,10 +128,7 @@ button {
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   margin-bottom: 20px;
-}
-
-button:hover {
-  background-color: #004d66;
+  width: 100%;
 }
 
 /* Rodapé */
@@ -127,16 +137,44 @@ footer {
   margin-top: 40px;
   font-size: 0.9em;
   color: #666;
+  padding: 10px;
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
+    align-items: center;
     gap: 10px;
   }
 
   main {
     padding: 10px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 5%;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  input, button {
+    font-size: 0.9rem;
   }
 }
