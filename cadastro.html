@@ -1,53 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro</title>
   <link rel="stylesheet" href="styles/style.css" />
-  <script src="assets/scripts/mask.js" defer></script>
+  <script src="scripts/main.js" defer></script>
 </head>
-<body>
-  <picture>
-  <source srcset="assets/imagens/cadastro.webp" type="image/webp">
-  <source srcset="assets/imagens/cadastro.png" type="image/jpeg">
-  <img src="assets/imagens/cadastro.png" alt="Voluntários em ação">
-</picture>
-  <header>
+<body data-theme="light">
+  <header role="banner">
     <h1>Cadastro de Voluntário</h1>
-    <nav>
+    <nav aria-label="Navegação principal">
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="projetos.html">Projetos</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
       </ul>
     </nav>
+    <button id="toggle-theme" aria-label="Alternar entre modo claro e escuro">Alternar tema</button>
   </header>
 
   <main>
-    <form>
+    <picture>
+      <source srcset="assets/imagens/cadastro.webp" type="image/webp">
+      <img src="assets/imagens/cadastro.png" alt="Voluntários em ação" class="imagem-destaque" />
+    </picture>
+
+    <form id="form">
       <fieldset>
         <legend>Informações Pessoais</legend>
-        <label>Nome Completo: <input type="text" name="nome" required /></label>
-        <label>Email: <input type="email" name="email" required /></label>
-        <label>CPF: <input type="text" name="cpf" required maxlength="14" /></label>
-        <label>Telefone: <input type="tel" name="telefone" required maxlength="15" /></label>
-        <label>Data de Nascimento: <input type="date" name="nascimento" required /></label>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" name="nome" id="nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" required maxlength="14" />
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" name="telefone" id="telefone" required maxlength="15" />
+
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" name="nascimento" id="nascimento" required />
       </fieldset>
 
       <fieldset>
         <legend>Endereço</legend>
-        <label>Endereço: <input type="text" name="endereco" required /></label>
-        <label>CEP: <input type="text" name="cep" required maxlength="9" /></label>
-        <label>Cidade: <input type="text" name="cidade" required /></label>
-        <label>Estado: <input type="text" name="estado" required /></label>
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" id="endereco" required />
+
+        <label for="cep">CEP:</label>
+        <input type="text" name="cep" id="cep" required maxlength="9" />
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" id="cidade" required />
+
+        <label for="estado">Estado:</label>
+        <input type="text" name="estado" id="estado" required />
       </fieldset>
 
-      <button type="submit">Enviar</button>
+      <button type="submit" aria-label="Enviar formulário de cadastro">Enviar</button>
     </form>
+
+    <div id="feedback" role="alert"></div>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 ONG Esperança Viva</p>
   </footer>
 </body>

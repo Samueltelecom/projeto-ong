@@ -28,8 +28,26 @@ Este projeto é uma plataforma web desenvolvida para uma organização não gove
 ---
 
 ## 📁 Estrutura de Pastas
-projeto-ong/ ├── index.html ├── styles/ │   └── style.css ├── scripts/ │   └── main.js ├── assets/ │   ├── images/ │   └── icons/ ├── README.md
-
+/projeto-ong-esperanca-viva
+│
+├── index.html
+├── projetos.html
+├── cadastro.html
+│
+├── styles/
+│   └── style.css
+│
+├── scripts/
+│   └── main.js
+│
+└── assets/
+    ├── imagens/
+    │   ├── doacoes.png / .webp
+    │   ├── voluntarios.png / .webp
+    │   ├── money.png / .webp
+    │   └── cadastro.png / .webp
+    └── images/
+        └── equipe.jpg
 
 ---
 

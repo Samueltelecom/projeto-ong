@@ -2,7 +2,6 @@
    🎨 Design System
 ============================ */
 :root {
-  /* Paleta de cores */
   --color-primary: #006699;
   --color-primary-dark: #004d66;
   --color-secondary: #ff6600;
@@ -13,7 +12,6 @@
   --color-success: #28a745;
   --color-error: #dc3545;
 
-  /* Tipografia */
   --font-base: 'Arial', sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -21,7 +19,6 @@
   --font-size-lg: 1.25rem;
   --font-size-xl: 1.5rem;
 
-  /* Espaçamento modular */
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
@@ -171,6 +168,22 @@ img {
   display: block;
 }
 
+.imagem-destaque {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.imagem-pequena {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: var(--space-2) auto;
+}
+
 /* Botões */
 button {
   background-color: var(--color-primary);
@@ -206,6 +219,9 @@ form {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+  background-color: white;
+  padding: var(--space-3);
+  border-radius: 8px;
 }
 
 fieldset {
@@ -339,3 +355,40 @@ input:invalid {
     font-size: var(--font-size-sm);
   }
 }
+
+/* ============================
+   🌙 Modo Escuro
+============================ */
+body[data-theme="dark"] {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body[data-theme="dark"] header,
+body[data-theme="dark"] footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: var(--space-3);
+  text-align: center;
+}
+
+body[data-theme="dark"] main,
+body[data-theme="dark"] form,
+body[data-theme="dark"] fieldset {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h2,
+body[data-theme="dark"] legend,
+body[data-theme="dark"] label {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] nav a {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] nav a:hover {
+  background-color

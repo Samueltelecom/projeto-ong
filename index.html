@@ -1,34 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ONG Esperança Viva</title>
   <link rel="stylesheet" href="styles/style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="scripts/main.js" defer></script>
 </head>
-<body>
-    <picture>
-  <source srcset="assets/imagens/doacoes.webp" type="image/webp">
-  <source srcset="assets/imagens/doacoes.png" type="image/jpeg">
-  <img src="assets/imagens/doacoes.png" alt="Voluntários em ação">
-</picture>
-  <header>
+<body data-theme="light">
+  <header role="banner">
     <h1>ONG Esperança Viva</h1>
-    <nav>
+    <nav aria-label="Navegação principal">
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="projetos.html">Projetos</a></li>
         <li><a href="cadastro.html">Cadastro</a></li>
       </ul>
     </nav>
+    <button id="toggle-theme" aria-label="Alternar entre modo claro e escuro">Alternar tema</button>
   </header>
 
   <main>
+    <picture>
+      <source srcset="assets/imagens/doacoes.webp" type="image/webp">
+      <source srcset="assets/imagens/doacoes.png" type="image/jpeg">
+      <img src="assets/imagens/doacoes.png" alt="Voluntários em ação" class="imagem-destaque" />
+    </picture>
+
     <section>
       <h2>Sobre a Organização</h2>
       <p>Promovemos inclusão social e cidadania por meio de projetos comunitários.</p>
-      <img src="assets/images/equipe.jpg" alt="Equipe da ONG" />
+      <img src="assets/images/equipe.jpg" alt="Equipe da ONG" class="imagem-destaque" />
     </section>
 
     <section>
@@ -38,7 +40,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 ONG Esperança Viva</p>
   </footer>
 </body>
